@@ -24,7 +24,7 @@ namespace KataChallangeTests
         [Fact]
         public void GivenLetterCShouldGenerateDiamondWithC()
         {
-            const string letter = "B";
+            const string letter = "C";
 
             Assert.Equal("  A\n" +
                          " B B\n" +
