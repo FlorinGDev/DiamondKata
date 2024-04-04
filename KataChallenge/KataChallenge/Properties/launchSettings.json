@@ -1,7 +1,8 @@
 {
   "profiles": {
     "KataChallenge": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "E"
     }
   }
 }

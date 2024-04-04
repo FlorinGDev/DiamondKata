@@ -6,7 +6,10 @@ namespace KataChallenge
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Diamond.Generate(args[0]));
+
+            Console.WriteLine(Diamond.Generate(args[0].ToCharArray()[0]));
+
+            Console.ReadLine();
         }
     }
 }
