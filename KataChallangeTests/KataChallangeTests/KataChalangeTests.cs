@@ -36,8 +36,6 @@ namespace KataChallangeTests
         [Fact]
         public void GivenParameterIsNotUpperCaseLetterShouldThrowException()
         {
-            const string letter = "B";
-
             Assert.Throws<ArgumentException>(() => Diamond.Generate('1'));
         }
 
