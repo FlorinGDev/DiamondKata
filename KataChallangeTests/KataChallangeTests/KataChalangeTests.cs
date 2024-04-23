@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace KataChallangeTests
 {
     public class KataChalangeTests
@@ -5,8 +7,6 @@ namespace KataChallangeTests
         [Fact]
         public void GivenLetterAShouldGenerateSmallestDiamonA()
         {
-            const string letter = "A";
-
             Assert.Equal("A", Diamond.Generate('A'));
         }
 
@@ -14,8 +14,6 @@ namespace KataChallangeTests
         [Fact]
         public void GivenLetterBShouldGenerateDiamondWithB()
         {
-            const string letter = "B";
-
             Assert.Equal(" A\n" +
                          "B B\n" +
                          " A\n", Diamond.Generate('B'));
@@ -24,8 +22,6 @@ namespace KataChallangeTests
         [Fact]
         public void GivenLetterCShouldGenerateDiamondWithC()
         {
-            const string letter = "C";
-
             Assert.Equal("  A\n" +
                          " B B\n" +
                          "C   C\n" +
@@ -39,5 +35,24 @@ namespace KataChallangeTests
             Assert.Throws<ArgumentException>(() => Diamond.Generate('1'));
         }
 
+
+        //Tests to have tdd process complete to create other methods
+        //[Fact] 
+        //public void GivenLetterBShouldGetPaddingLeft()
+        //{
+        //  Assert.Equal((0, 1), Diamond.GetPadding('B', 'B'));
+        //}
+
+        //[Fact]
+        //public void GivenLetterBShouldGetExpectedLineForCharacter()
+        //{
+        //  Assert.Equal(("B B\n"), Diamond.GetLineForCharacter('B', 0, 1));
+        //}
+
+        //[Fact]
+        //public void GivenLetterBShouldGetExpectedHalfOfDiamondPlusMiddle()
+        //{
+        //  Assert.Equal(new List { " A\n", "B B\n" }, Diamond.GetHalfOfDiamondPlusMiddle('B'));
+        //}
     }
 }
